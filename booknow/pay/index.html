@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pay Now</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- PayPal Logo --><table style="position: absolute; top: 0; right: 0;" border="0" cellpadding="0" cellspacing="0" align="right"><tr><td align="center"></td></tr><tr><td align="center"><a href="https://www.paypal.com/in/webapps/mpp/online-shopping?utm_medium=partner&utm_source=website&utm_campaign=pp-safe-hai-160x600&utm_content=SGNLUJZTPA6GU" title="How PayPal Works" target="_blank"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/india/business-toolkit-demo/pay-with-paypal-160x600.png" alt="Pay With PayPal safe hai 160x600" /></a></td></tr></table><!-- PayPal Logo -->
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="payment">
+    <div class="payment-logo">
+      <p>p</p>
+    </div>
+    
+    
+    <h2>Payment Gateway</h2>
+    <form action="sendticket.php" method="POST">
+    <div class="form">
+      <div class="card space icon-relative">
+        <label class="label">From:</label>
+        <input type="text" class="input" id="from" placeholder="Destination" name="from" required="required">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">To:</label>
+        <input type="text" class="input" id="to" placeholder="Source" name="to" required="required">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Mobile Number:</label>
+        <input type="text" class="input" placeholder="Mobile Number" name="mobno" required="required" onclick="price()">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Total Fare:</label>
+        <input type="text" class="input" id="fare" placeholder="fare" name="fare" required="required" value="" readonly>
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Card holder:</label>
+        <input type="text" class="input" placeholder="Name">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="card space icon-relative">
+        <label class="label">Card number:</label>
+        <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+        <i class="far fa-credit-card"></i>
+      </div>
+      <div class="card-grp space">
+        <div class="card-item icon-relative">
+          <label class="label">Expiry date:</label>
+          <input type="text" name="expiry-data" class="input"  placeholder="00 / 00">
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="card-item icon-relative">
+          <label class="label">CVC:</label>
+          <input type="text" class="input" data-mask="000" placeholder="000">
+          <i class="fas fa-lock"></i>
+        </div>
+      </div>
+        
+      <input type="submit" class="btn" value="                                        Pay                                            ">
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

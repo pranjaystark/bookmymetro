@@ -1,0 +1,41 @@
+.footer{
+	background-color: black;
+	color: white;
+	width: 100%;
+	height: 250px;
+	margin: 10px;
+	padding: 35px 10px;
+
+}
+.footer a{
+	 text-decoration: none;
+	  color: white;
+	  font-size: 18px; 
+	  padding: 10px;
+	  text-align: center;
+	  line-height: 25px;
+  border-radius: 4px;
+font-family: 'Artifika', cursive;
+              }
+.first{
+	float :left;
+   
+ 	margin-left:140;
+	width: 50%;
+	display: inline-block;
+
+
+}
+.second{
+	float:right;
+	margin-right:-140;
+	width: 50%;
+	display: inline-block;
+}
+.footer a:hover{
+  background-color: #ddd;
+  color: black;
+}
+.list-item{
+	padding: 4px;
+}

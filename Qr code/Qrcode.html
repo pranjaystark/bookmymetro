@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>QRious Demo</title>
+
+  <style>
+    html {
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      height: calc(100% - 100px);
+      margin: 50px 0;
+      background-color: #ccc;
+    }
+
+    *, :after, :before {
+      box-sizing: border-box;
+    }
+
+    main {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    main section {
+      min-width: 250px;
+      max-width: 50%;
+      height: 100%;
+      text-align: center;
+    }
+
+    main img {
+      box-shadow: 0 0 10px 5px #666;
+    }
+
+    main form {
+      padding: 25px 0 50px 0;
+      text-align: left;
+    }
+
+    main form label {
+      display: block;
+      margin-top: 10px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    main form input,
+    main form select {
+      width: 100%;
+    }
+
+    main form input:invalid {
+      outline: 2px solid #f00;
+      color: #f00;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <img id="qrious">
+
+    <form autocomplete="off">
+      <label>
+        value
+        <input type="text" name="value" value="QRious" spellcheck="false">
+      </label>
+
+ 
+    </form>
+  </section>
+</main>
+
+<script src="qrious.js"></script>
+<script>
+  (function() {
+
+    var $value = document.querySelector('main form [name="value"]');
+
+    var qr = window.qr = new QRious({
+      element: document.getElementById('qrious'),
+      size: 250,
+      value: 'QRious'
+    });
+
+   
+
+    $value.value = 'QRious';
+    $value.addEventListener('input', function() {
+      qr.value = $value.value;
+    });
+  })();
+</script>
+</body>
+</html>
